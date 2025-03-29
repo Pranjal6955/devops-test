@@ -24,5 +24,10 @@ pipeline {
                 sh 'npm run build'
             }
         }
+        stage('Deploy') {
+            steps {
+                sh 'echo "Deploying the application"'
+            }
+        }
     }
 }
