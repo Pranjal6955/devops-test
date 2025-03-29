@@ -1,26 +1,26 @@
 pipeline {
     agent any
-    tools{
+    tools {
         nodejs 'NodeJS'
     }
-    Stages{
-        Stage('Clone Repository'){
-            Steps{
-            git branch : 'main' , url:'https://github.com/Pranjal6955/devops-test.git'
+    stages {
+        stage('Clone Repository') {
+            steps {
+                git branch: 'main', url: 'https://github.com/Pranjal6955/devops-test.git'
             }
         }
-        Stage('Install Dependencies'){
-            Steps{
+        stage('Install Dependencies') {
+            steps {
                 sh 'npm install'
             }
         }
-        Stage('Run Tests'){
-            Steps{
+        stage('Run Tests') {
+            steps {
                 sh 'npm test || echo "No tests defined"'
             }
         }
-        Stage('Build'){
-            Steps{
+        stage('Build') {
+            steps {
                 sh 'npm run build'
             }
         }
