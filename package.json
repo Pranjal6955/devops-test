@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server.js",
     "test": "echo 'test is succesful ' && exit 0",
-    "build": "echo Building project && exit 0"
+    "build": "echo 'Building project' && exit 0"
 
   },
   "dependencies": {
